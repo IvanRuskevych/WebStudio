@@ -896,22 +896,20 @@ body {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/imgheader-mobile.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/imgheader-mobile.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+.hero {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/imgheader-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/imgheader-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-@media screen and (max-width: 480px) and (min-device-pixel-ratio: 2), screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 480px) and (min-resolution: 192dpi), screen and (max-width: 480px) and (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/imgheader-mobile@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/imgheader-mobile@2x.jpg);
   }
 }
-@media screen and (max-width: 480px) and (min-device-pixel-ratio: 3), screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 480px) and (min-resolution: 288dpi), screen and (max-width: 480px) and (min-resolution: 3dppx) {
+@media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/imgheader-mobile@3x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/imgheader-mobile@3x.jpg);
@@ -1244,6 +1242,11 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .clients-list__item + .clients-list__item {
+    margin-top: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
