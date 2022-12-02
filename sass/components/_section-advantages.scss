@@ -1,0 +1,56 @@
+.advantages {
+}
+
+.advantages-list {
+  @media screen and (min-width: 768px) {
+    @include gridFlexWrap();
+  }
+
+  &__item {
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
+  }
+
+  &__item + &__item {
+    @media screen and (max-width: 767px) {
+      margin-top: 30px;
+    }
+  }
+
+  &__wrap {
+    @include centeredFlex();
+    margin-bottom: 30px;
+
+    height: 120px;
+
+    background-color: $secondaryBgColor;
+
+    @media screen and (min-width: 768px) {
+      width: inherit;
+    }
+  }
+
+  &__icon {
+  }
+
+  &__title {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+
+    margin-bottom: 10px;
+    color: $primaryTextColor;
+
+    @include mainTextStyle($fontFamyly, 700, $size, $height, $spacing);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @include mainTextStyle($fontFamyly, 400, $size, 24px, $spacing);
+    color: $seconderyTextColor;
+  }
+}

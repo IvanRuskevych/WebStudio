@@ -1,0 +1,96 @@
+.menu-toggle {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
+
+  &--position {
+    position: absolute;
+    top: 21px;
+    right: 25px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  //   z-index: 999;
+
+  background: #ffffff;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  transform: translateX(100%);
+  @include mainTransition(transform);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.site-menu {
+  &__item {
+    @include mainTextStyle($fontFamyly, 500, 40px, 47px, 00.02em);
+  }
+  &__item + &__item {
+    margin-top: 32px;
+  }
+
+  &__link {
+    color: $primaryTextColor;
+
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+  }
+}
+
+.mobile-address {
+  margin-top: 300px;
+}
+.mobile-address-list {
+  &__item {
+    color: $seconderyTextColor;
+  }
+
+  &__item + &__item {
+    margin-top: 32px;
+  }
+
+  &__tel {
+    @include mainTextStyle($fontFamyly, 500, 34px, 40px, 00.02em);
+
+    color: $accentColor;
+  }
+
+  &__mailto {
+    @include mainTextStyle($fontFamyly, 500, 24px, 28px, 00.02em);
+
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+  }
+}

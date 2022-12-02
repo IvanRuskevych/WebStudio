@@ -1,0 +1,31 @@
+// BASE
+@import './utils/reset';
+@import './utils/variables';
+
+// UTILS
+@import './utils/mixins';
+@import './utils/placeholders';
+
+// COMPONENTS
+@import './components/basic-classes';
+@import './components/logo';
+@import './components/socialnets';
+@import './components/footer-form';
+@import './components/modal-form';
+@import './components/mobile-menu';
+
+//LAYOUT --MAIN--
+@import './components/header';
+@import './components/hero';
+@import './components/hero-img-background';
+@import './components/footer';
+
+// LAYOUT --STUDIO--
+@import './components/section-advantages';
+@import './components/section-whatwedo';
+@import './components/section-team';
+@import './components/section-clients';
+
+// LAYOUT --PORTFOLIO--
+@import './components/portfolio';
+@import './components/cases-gallery';

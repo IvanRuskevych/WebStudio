@@ -1,0 +1,62 @@
+.clients {
+  // @extend %section;
+
+  &__title {
+    @extend %secondTitleStyle;
+  }
+}
+.clients-list {
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    @include gridFlexWrap();
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include centeredFlex();
+  }
+
+  &__item + &__item {
+    @media screen and (min-width: 1200px) {
+      margin-left: 30px;
+    }
+  }
+
+  &__link {
+    @include centeredFlex();
+
+    min-width: 210px;
+    height: 92px;
+
+    @media screen and (min-width: 480px) {
+      width: 210px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 226px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+    }
+
+    @include borderType($mainIconColor, $l-width: 1px);
+    border-radius: 4px;
+
+    @include mainTransition(border-color);
+
+    &:hover,
+    &:focus {
+      outline: 0;
+      border-color: $accentColor;
+    }
+  }
+
+  &__icon {
+    fill: $mainIconColor;
+    @include mainTransition(fill);
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: $accentColor;
+  }
+}

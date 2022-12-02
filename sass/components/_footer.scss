@@ -1,0 +1,98 @@
+.footer {
+  background-color: $footerBgColor;
+
+  &__wrap {
+    text-align: center;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+    align-items: baseline;
+
+    @media screen and (min-width: 1200px) {
+      @include centeredFlex();
+      align-items: baseline;
+    }
+
+    &--position {
+      @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+      }
+    }
+  }
+}
+
+.footer-socialnets {
+  margin-top: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 90px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    @include mainTextStyle($fontFamyly, 700, $size, $height, $spacing);
+    text-transform: uppercase;
+    color: $thirdTextColor;
+  }
+}
+
+.footer-contacts {
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
+}
+
+.footer__logo {
+  display: inline-flex;
+  margin-bottom: 28px;
+  color: $thirdTextColor;
+}
+
+.address {
+}
+
+.address-list {
+  &__item + &__item {
+    margin-top: 12px;
+  }
+
+  &__map {
+    @extend %footerContactsStyle;
+    color: $thirdTextColor;
+
+    @include mainTransition(color);
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+  }
+
+  &__tel,
+  &__mailto {
+    @extend %footerContactsStyle;
+    color: $forthTextColor;
+    @include mainTransition(color);
+  }
+
+  &__tel:hover,
+  &__tel:focus,
+  &__mailto:hover,
+  &__mailto:focus {
+    color: $accentColor;
+  }
+}
+
+.socialnets {
+  &__item {
+  }
+
+  &__link {
+    background-color: $secondaryIconBgColor;
+  }
+
+  &__icon--color {
+    fill: $thirdTextColor;
+  }
+}
