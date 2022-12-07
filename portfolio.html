@@ -34,7 +34,7 @@
             <a class="header-menu__link underline current" href="./portfolio.html">Портфоліо</a>
           </li>
           <li class="header-menu__item">
-            <a class="header-menu__link underline" href="#">Контакти</a>
+            <a class="header-menu__link underline" href="#move-to-contacts">Контакти</a>
           </li>
         </ul>
         <ul class="header-contacts">
@@ -55,8 +55,19 @@
             </a>
           </li>
         </ul>
+        <button class="menu-toggle js-open-menu" type="button" aria-expanded="false">
+          <svg
+            class="menu-button__icon"
+            width="40"
+            height="40"
+            aria-label="Меню сайту на мобільному телефоні"
+          >
+            <use class="menu-button__icon-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </nav>
     </header>
+
     <main class="portfolio-main">
       <!-- CASES ------------>
       <section class="cases section">
@@ -96,7 +107,20 @@
                 <div class="cases-gallery__card">
                   <img
                     class="cases-gallery__img"
-                    src="./images/website-tehno.jpg"
+                    srcset="
+                      ./images/imgcase-one-450.jpg     450w,
+                      ./images/imgcase-one-450@2x.jpg  900w,
+                      ./images/imgcase-one-450@3x.jpg 1350w,
+                      ./images/imgcase-one-354.jpg     354w,
+                      ./images/imgcase-one-354@2x.jpg  708w,
+                      ./images/imgcase-one-354@3x.jpg 1062w,
+                      ./images/imgcase-one-370.jpg     370w,
+                      ./images/imgcase-one-370@2x.jpg  740w,
+                      ./images/imgcase-one-370@3x.jpg 1110w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/imgcase-one-450.jpg"
+                    loading="lazy"
                     width="370"
                     alt="вебсайт технокряк"
                   />
@@ -123,7 +147,20 @@
                 <div class="cases-gallery__card">
                   <img
                     class="cases-gallery__img"
-                    src="./images/basketbol.jpg"
+                    srcset="
+                      ./images/imgcase-two-450.jpg     450w,
+                      ./images/imgcase-two-450@2x.jpg  900w,
+                      ./images/imgcase-two-450@3x.jpg 1350w,
+                      ./images/imgcase-two-354.jpg     354w,
+                      ./images/imgcase-two-354@2x.jpg  708w,
+                      ./images/imgcase-two-354@3x.jpg 1062w,
+                      ./images/imgcase-two-370.jpg     370w,
+                      ./images/imgcase-two-370@2x.jpg  740w,
+                      ./images/imgcase-two-370@3x.jpg 1110w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/imgcase-two-450.jpg"
+                    loading="lazy"
                     width="370"
                     alt="Постер New Orlean vs Golden Star"
                   />
@@ -149,7 +186,20 @@
                 <div class="cases-gallery__card">
                   <img
                     class="cases-gallery__img"
-                    src="./images/restaurant-seafood.jpg"
+                    srcset="
+                      ./images/imgcase-three-450.jpg     450w,
+                      ./images/imgcase-three-450@2x.jpg  900w,
+                      ./images/imgcase-three-450@3x.jpg 1350w,
+                      ./images/imgcase-three-354.jpg     354w,
+                      ./images/imgcase-three-354@2x.jpg  708w,
+                      ./images/imgcase-three-354@3x.jpg 1062w,
+                      ./images/imgcase-three-370.jpg     370w,
+                      ./images/imgcase-three-370@2x.jpg  740w,
+                      ./images/imgcase-three-370@3x.jpg 1110w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/imgcase-three-450.jpg"
+                    loading="lazy"
                     width="370"
                     alt="Ресторан Seafood"
                   />
@@ -175,7 +225,20 @@
                 <div class="cases-gallery__card">
                   <img
                     class="cases-gallery__img"
-                    src="./images/project-prime.jpg"
+                    srcset="
+                      ./images/imgcase-four-450.jpg     450w,
+                      ./images/imgcase-four-450@2x.jpg  900w,
+                      ./images/imgcase-four-450@3x.jpg 1350w,
+                      ./images/imgcase-four-354.jpg     354w,
+                      ./images/imgcase-four-354@2x.jpg  708w,
+                      ./images/imgcase-four-354@3x.jpg 1062w,
+                      ./images/imgcase-four-370.jpg     370w,
+                      ./images/imgcase-four-370@2x.jpg  740w,
+                      ./images/imgcase-four-370@3x.jpg 1110w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/imgcase-four-450.jpg"
+                    loading="lazy"
                     width="370"
                     alt="Проєкт Prime"
                   />
@@ -201,7 +264,20 @@
                 <div class="cases-gallery__card">
                   <img
                     class="cases-gallery__img"
-                    src="./images/project-boxes.png"
+                    srcset="
+                      ./images/imgcase-five-450.jpg     450w,
+                      ./images/imgcase-five-450@2x.jpg  900w,
+                      ./images/imgcase-five-450@3x.jpg 1350w,
+                      ./images/imgcase-five-354.jpg     354w,
+                      ./images/imgcase-five-354@2x.jpg  708w,
+                      ./images/imgcase-five-354@3x.jpg 1062w,
+                      ./images/imgcase-five-370.jpg     370w,
+                      ./images/imgcase-five-370@2x.jpg  740w,
+                      ./images/imgcase-five-370@3x.jpg 1110w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/imgcase-five-450.jpg"
+                    loading="lazy"
                     width="370"
                     alt="Проєкт Boxes"
                   />
@@ -227,7 +303,20 @@
                 <div class="cases-gallery__card">
                   <img
                     class="cases-gallery__img"
-                    src="./images/inspiration.jpg"
+                    srcset="
+                      ./images/imgcase-six-450.jpg     450w,
+                      ./images/imgcase-six-450@2x.jpg  900w,
+                      ./images/imgcase-six-450@3x.jpg 1350w,
+                      ./images/imgcase-six-354.jpg     354w,
+                      ./images/imgcase-six-354@2x.jpg  708w,
+                      ./images/imgcase-six-354@3x.jpg 1062w,
+                      ./images/imgcase-six-370.jpg     370w,
+                      ./images/imgcase-six-370@2x.jpg  740w,
+                      ./images/imgcase-six-370@3x.jpg 1110w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/imgcase-six-450.jpg"
+                    loading="lazy"
                     width="370"
                     alt="Inspiration has no Borders"
                   />
@@ -253,7 +342,20 @@
                 <div class="cases-gallery__card">
                   <img
                     class="cases-gallery__img"
-                    src="./images/limited-edition.jpg"
+                    srcset="
+                      ./images/imgcase-seven-450.jpg     450w,
+                      ./images/imgcase-seven-450@2x.jpg  900w,
+                      ./images/imgcase-seven-450@3x.jpg 1350w,
+                      ./images/imgcase-seven-354.jpg     354w,
+                      ./images/imgcase-seven-354@2x.jpg  708w,
+                      ./images/imgcase-seven-354@3x.jpg 1062w,
+                      ./images/imgcase-seven-370.jpg     370w,
+                      ./images/imgcase-seven-370@2x.jpg  740w,
+                      ./images/imgcase-seven-370@3x.jpg 1110w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/imgcase-seven-450.jpg"
+                    loading="lazy"
                     width="370"
                     alt="Видання Limited Edition"
                   />
@@ -279,7 +381,20 @@
                 <div class="cases-gallery__card">
                   <img
                     class="cases-gallery__img"
-                    src="./images/project-lab.jpg"
+                    srcset="
+                      ./images/imgcase-eight-450.jpg     450w,
+                      ./images/imgcase-eight-450@2x.jpg  900w,
+                      ./images/imgcase-eight-450@3x.jpg 1350w,
+                      ./images/imgcase-eight-354.jpg     354w,
+                      ./images/imgcase-eight-354@2x.jpg  708w,
+                      ./images/imgcase-eight-354@3x.jpg 1062w,
+                      ./images/imgcase-eight-370.jpg     370w,
+                      ./images/imgcase-eight-370@2x.jpg  740w,
+                      ./images/imgcase-eight-370@3x.jpg 1110w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/imgcase-eight-450.jpg"
+                    loading="lazy"
                     width="370"
                     alt="Проєкт LAB"
                   />
@@ -305,7 +420,20 @@
                 <div class="cases-gallery__card">
                   <img
                     class="cases-gallery__img"
-                    src="./images/growing-business.jpg"
+                    srcset="
+                      ./images/imgcase-nine-450.jpg     450w,
+                      ./images/imgcase-nine-450@2x.jpg  900w,
+                      ./images/imgcase-nine-450@3x.jpg 1350w,
+                      ./images/imgcase-nine-354.jpg     354w,
+                      ./images/imgcase-nine-354@2x.jpg  708w,
+                      ./images/imgcase-nine-354@3x.jpg 1062w,
+                      ./images/imgcase-nine-370.jpg     370w,
+                      ./images/imgcase-nine-370@2x.jpg  740w,
+                      ./images/imgcase-nine-370@3x.jpg 1110w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/imgcase-nine-450.jpg"
+                    loading="lazy"
                     width="370"
                     alt="Growing Business"
                   />
@@ -331,7 +459,7 @@
         <div class="footer__wrap--position">
           <div class="footer-contacts">
             <a class="logo footer__logo" lang="en" href="./index.html"><span>Web</span>Studio</a>
-            <address class="address">
+            <address class="address" id="move-to-contacts">
               <ul class="address-list">
                 <li class="address-list__item">
                   <a
@@ -426,5 +554,79 @@
         </form>
       </div>
     </footer>
+
+    <!-- MOBILE MENU -->
+    <div class="menu-container js-menu-container" id="site-menu">
+      <button class="menu-toggle menu-toggle--position js-close-menu">
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="site-menu">
+        <li class="site-menu__item">
+          <a class="site-menu__link current" href="./index.html">Студія</a>
+        </li>
+        <li class="site-menu__item">
+          <a class="site-menu__link" href="./portfolio.html">Портфоліо</a>
+        </li>
+        <li class="site-menu__item">
+          <a class="site-menu__link" href="#">Контакти</a>
+        </li>
+      </ul>
+      <div class="mobile-menu__wrep">
+        <ul class="mobile-contacts-list">
+          <li class="mobile-contacts-list__item">
+            <a class="mobile-contacts-list__tel" href="tel:+380961111111">+38 096 111-11-11</a>
+          </li>
+
+          <li class="mobile-contacts-list__item">
+            <a class="mobile-contacts-list__mailto" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-socialnets">
+          <li class="mobile-socialnets__item">
+            <a
+              class="mobile-socialnets__link mobile-socialnets__link--left"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Instagram
+            </a>
+          </li>
+          <li class="mobile-socialnets__item">
+            <a
+              class="mobile-socialnets__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Twitter
+            </a>
+          </li>
+          <li class="mobile-socialnets__item">
+            <a
+              class="mobile-socialnets__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Facebook
+            </a>
+          </li>
+          <li class="mobile-socialnets__item">
+            <a
+              class="mobile-socialnets__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
+
+  <script defer src="js/mobile-menu.js"></script>
 </html>

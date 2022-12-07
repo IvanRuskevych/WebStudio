@@ -34,7 +34,7 @@
             <a class="header-menu__link underline" href="./portfolio.html">Портфоліо</a>
           </li>
           <li class="header-menu__item">
-            <a class="header-menu__link underline" href="#">Контакти</a>
+            <a class="header-menu__link underline" href="#move-to-contscts">Контакти</a>
           </li>
         </ul>
         <ul class="header-contacts">
@@ -62,7 +62,6 @@
             height="40"
             aria-label="Меню сайту на мобільному телефоні"
           >
-            <!-- <use class="menu-button__icon-close" href="./images/icons.svg#icon-close"></use> -->
             <use class="menu-button__icon-menu" href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
@@ -141,17 +140,13 @@
             <li class="whatwedo-list__item">
               <img
                 srcset="
-                  ./images/imgdesktop-app.webp    1x,
-                  ./images/imgdesktop-app@2x.webp 2x,
-                  ./images/imgdesktop-app@3x.webp 3x
-                "
-                srcset="
                   ./images/imgdesktop-app.jpg    1x,
                   ./images/imgdesktop-app@2x.jpg 2x,
                   ./images/imgdesktop-app@3x.jpg 3x
                 "
                 src="./images/imgdesktop-app.jpg"
                 width="370"
+                loading="lazy"
                 alt="Десктопні додатки"
               />
               <p class="whatwedo-list__text">Десктопні додатки</p>
@@ -159,17 +154,13 @@
             <li class="whatwedo-list__item">
               <img
                 srcset="
-                  ./images/imgmobile-app.webp    1x,
-                  ./images/imgmobile-app@2x.webp 2x,
-                  ./images/imgmobile-app@3x.webp 3x
-                "
-                srcset="
                   ./images/imgmobile-app.jpg    1x,
                   ./images/imgmobile-app@2x.jpg 2x,
                   ./images/imgmobile-app@3x.jpg 3x
                 "
                 src="./images/imgmobile-app.jpg"
                 width="370"
+                loading="lazy"
                 alt="Мобільні додатки"
               />
               <p class="whatwedo-list__text">Мобільні додатки</p>
@@ -177,17 +168,13 @@
             <li class="whatwedo-list__item">
               <img
                 srcset="
-                  ./images/imgdesign-solutions.webp    1x,
-                  ./images/imgdesign-solutions@2x.webp 2x,
-                  ./images/imgdesign-solutions@3x.webp 3x
-                "
-                srcset="
                   ./images/imgdesign-solutions.jpg    1x,
                   ./images/imgdesign-solutions@2x.jpg 2x,
                   ./images/imgdesign-solutions@3x.jpg 3x
                 "
                 src="./images/imgdesign-solutions.jpg"
                 width="370"
+                loading="lazy"
                 alt="Дизайнерські рішення"
               />
               <p class="whatwedo-list__text">Дизайнерські рішення</p>
@@ -205,19 +192,21 @@
               <div class="team-list__wrap">
                 <img
                   srcset="
-                    ./images/imgmember-one-450.webp     450w,
-                    ./images/imgmember-one-450@2x.webp  900w,
-                    ./images/imgmember-one-450@3x.webp 1350w
-                  "
-                  srcset="
                     ./images/imgmember-one-450.jpg     450w,
                     ./images/imgmember-one-450@2x.jpg  900w,
-                    ./images/imgmember-one-450@3x.jpg 1350w
+                    ./images/imgmember-one-450@3x.jpg 1350w,
+                    ./images/imgmember-one-354.jpg     354w,
+                    ./images/imgmember-one-354@2x.jpg  708w,
+                    ./images/imgmember-one-354@3x.jpg 1062w,
+                    ./images/imgmember-one-270.jpg     270w,
+                    ./images/imgmember-one-270@2x.jpg  540w,
+                    ./images/imgmember-one-270@3x.jpg  810w
                   "
-                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                   src="./images/imgmember-one-450.jpg"
-                  width="270"
+                  loading="lazy"
                   alt="Ігор Дем'яненко"
+                  width="270"
                 />
                 <div class="team-list__cardfooter">
                   <h3 class="team-list__title">Ігор Дем'яненко</h3>
@@ -259,16 +248,17 @@
               <div class="team-list__wrap">
                 <img
                   srcset="
-                    ./images/imgmember-two-450.webp     450w,
-                    ./images/imgmember-two-450@2x.webp  900w,
-                    ./images/imgmember-two-450@3x.webp 1350w
-                  "
-                  srcset="
                     ./images/imgmember-two-450.jpg     450w,
                     ./images/imgmember-two-450@2x.jpg  900w,
-                    ./images/imgmember-two-450@3x.jpg 1350w
+                    ./images/imgmember-two-450@3x.jpg 1350w,
+                    ./images/imgmember-two-354.jpg     354w,
+                    ./images/imgmember-two-354@2x.jpg  708w,
+                    ./images/imgmember-two-354@3x.jpg 1062w,
+                    ./images/imgmember-two-270.jpg     270w,
+                    ./images/imgmember-two-270@2x.jpg  540w,
+                    ./images/imgmember-two-270@3x.jpg  810w
                   "
-                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                   src="./images/imgmember-two-450.jpg"
                   width="270"
                   alt="Ольга Рєпіна"
@@ -313,16 +303,17 @@
               <div class="team-list__wrap">
                 <img
                   srcset="
-                    ./images/imgmember-three-450.webp     450w,
-                    ./images/imgmember-three-450@2x.webp  900w,
-                    ./images/imgmember-three-450@3x.webp 1350w
-                  "
-                  srcset="
                     ./images/imgmember-three-450.jpg     450w,
                     ./images/imgmember-three-450@2x.jpg  900w,
-                    ./images/imgmember-three-450@3x.jpg 1350w
+                    ./images/imgmember-three-450@3x.jpg 1350w,
+                    ./images/imgmember-three-354.jpg     354w,
+                    ./images/imgmember-three-354@2x.jpg  708w,
+                    ./images/imgmember-three-354@3x.jpg 1062w,
+                    ./images/imgmember-three-270.jpg     270w,
+                    ./images/imgmember-three-270@2x.jpg  540w,
+                    ./images/imgmember-three-270@3x.jpg  810w
                   "
-                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                   src="./images/imgmember-three-450.jpg"
                   width="270"
                   alt="Микола Тарасов"
@@ -367,16 +358,17 @@
               <div class="team-list__wrap">
                 <img
                   srcset="
-                    ./images/imgmember-four-450.webp     450w,
-                    ./images/imgmember-four-450@2x.webp  900w,
-                    ./images/imgmember-four-450@3x.webp 1350w
-                  "
-                  srcset="
                     ./images/imgmember-four-450.jpg     450w,
                     ./images/imgmember-four-450@2x.jpg  900w,
-                    ./images/imgmember-four-450@3x.jpg 1350w
+                    ./images/imgmember-four-450@3x.jpg 1350w,
+                    ./images/imgmember-four-354.jpg     354w,
+                    ./images/imgmember-four-354@2x.jpg  708w,
+                    ./images/imgmember-four-354@3x.jpg 1062w,
+                    ./images/imgmember-four-270.jpg     270w,
+                    ./images/imgmember-four-270@2x.jpg  540w,
+                    ./images/imgmember-four-270@3x.jpg  810w
                   "
-                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                   src="./images/imgmember-four-450.jpg"
                   width="270"
                   alt="Михайло Єрмаков"
@@ -509,7 +501,7 @@
         <div class="footer__wrap--position">
           <div class="footer-contacts">
             <a class="logo footer__logo" lang="en" href="./index.html"><span>Web</span>Studio</a>
-            <address class="address">
+            <address class="address" id="move-to-contscts">
               <ul class="address-list">
                 <li class="address-list__item">
                   <a
@@ -681,7 +673,7 @@
 
       <ul class="site-menu">
         <li class="site-menu__item">
-          <a class="site-menu__link" href="./index.html">Студія</a>
+          <a class="site-menu__link current" href="./index.html">Студія</a>
         </li>
         <li class="site-menu__item">
           <a class="site-menu__link" href="./portfolio.html">Портфоліо</a>
@@ -690,57 +682,57 @@
           <a class="site-menu__link" href="#">Контакти</a>
         </li>
       </ul>
-      <address class="mobile-address">
-        <ul class="mobile-address-list">
-          <li class="mobile-address-list__item">
-            <a class="mobile-address-list__tel" href="tel:+380961111111">+38 096 111-11-11</a>
+      <div class="mobile-menu__wrep">
+        <ul class="mobile-contacts-list">
+          <li class="mobile-contacts-list__item">
+            <a class="mobile-contacts-list__tel" href="tel:+380961111111">+38 096 111-11-11</a>
           </li>
 
-          <li class="mobile-address-list__item">
-            <a class="mobile-address-list__mailto" href="mailto:info@devstudio.com"
+          <li class="mobile-contacts-list__item">
+            <a class="mobile-contacts-list__mailto" href="mailto:info@devstudio.com"
               >info@devstudio.com</a
             >
           </li>
         </ul>
-      </address>
-      <ul class="mobile-socialnets">
-        <li class="mobile-socialnets__item">
-          <a
-            class="mobile-socialnets__link"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            >Instagram
-          </a>
-        </li>
-        <li class="mobile-socialnets__item">
-          <a
-            class="mobile-socialnets__link"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            >Twitter
-          </a>
-        </li>
-        <li class="mobile-socialnets__item">
-          <a
-            class="mobile-socialnets__link"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            >Facebook
-          </a>
-        </li>
-        <li class="mobile-socialnets__item">
-          <a
-            class="mobile-socialnets__link"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            >LinkedIn
-          </a>
-        </li>
-      </ul>
+        <ul class="mobile-socialnets">
+          <li class="mobile-socialnets__item">
+            <a
+              class="mobile-socialnets__link mobile-socialnets__link--left"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Instagram
+            </a>
+          </li>
+          <li class="mobile-socialnets__item">
+            <a
+              class="mobile-socialnets__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Twitter
+            </a>
+          </li>
+          <li class="mobile-socialnets__item">
+            <a
+              class="mobile-socialnets__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Facebook
+            </a>
+          </li>
+          <li class="mobile-socialnets__item">
+            <a
+              class="mobile-socialnets__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 

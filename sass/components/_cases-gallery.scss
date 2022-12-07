@@ -1,10 +1,19 @@
 .cases-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @include mq(tab) {
+    @include gridFlexWrap();
+  }
 
   &__item {
+    @include mq(tab-only) {
+      max-width: 354px;
+    }
+
     background: #ffffff;
+  }
+  &__item + &__item {
+    @include mq(mob-only) {
+      margin-top: 30px;
+    }
   }
 
   &__link {
@@ -14,7 +23,8 @@
     @include mainTransition(box-shadow);
     &:hover,
     &:focus {
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
     }
   }
 
@@ -70,5 +80,15 @@
   &__text {
     @include mainTextStyle($fontFamyly, $weight, 16px, 30px, $spacing);
     color: $seconderyTextColor;
+  }
+}
+
+// ЗБІЛЬШЕННЯ height до 147px для .cases-gallery__desc (Технокряк)
+@include mq(tab-only) {
+  .cases-gallery__item:first-child {
+    // outline: 1px solid red;
+    .cases-gallery__desc {
+      height: 147px;
+    }
   }
 }

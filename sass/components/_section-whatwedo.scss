@@ -1,8 +1,9 @@
 .whatwedo {
-  @media screen and (max-width: 1200px) {
+  padding-bottom: 94px;
+
+  @include mq(not-desk) {
     display: none;
   }
-  padding-bottom: 94px;
 
   &__title {
     @extend %secondTitleStyle;

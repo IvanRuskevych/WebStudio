@@ -2,13 +2,29 @@
   // @extend %section;
 }
 .cases-menu {
-  @include centeredFlex();
-  margin-bottom: 50px;
+  @include mq(mob-only) {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 8px;
+    margin-bottom: 40px;
+  }
+
+  @include mq(tab) {
+    @include centeredFlex();
+    margin-bottom: 30px;
+  }
+
+  @include mq(desk) {
+    margin-bottom: 50px;
+  }
 
   &__item {
   }
   &__item + &__item {
-    margin-left: 8px;
+    @include mq(tab) {
+      margin-left: 8px;
+    }
   }
 
   &__btn {
@@ -21,11 +37,16 @@
     color: $primaryTextColor;
 
     @include twopropertyTransition(background-color, color);
+    @include twopropertyTransition(box-shadow, border-radius);
+
     &:hover,
     &:focus {
       background-color: $accentColor;
       color: $thirdTextColor;
       outline: 0;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
     }
   }
 }

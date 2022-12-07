@@ -11,11 +11,11 @@
 
   &--position {
     position: absolute;
-    top: 21px;
-    right: 25px;
+    top: 10px;
+    right: 15px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     display: none;
   }
 }
@@ -24,6 +24,9 @@
   position: fixed;
   top: 0;
   left: 0;
+
+  @include centeredFlex($jc: space-between, $ai: none);
+  flex-direction: column;
 
   width: 100vw;
   height: 100vh;
@@ -42,7 +45,7 @@
     transform: translateX(0);
   }
 
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     display: none;
   }
 }
@@ -65,10 +68,10 @@
   }
 }
 
-.mobile-address {
+.mobile-contacts {
   margin-top: 300px;
 }
-.mobile-address-list {
+.mobile-contacts-list {
   &__item {
     color: $seconderyTextColor;
   }

@@ -1,25 +1,22 @@
 .clients {
-  // @extend %section;
-
   &__title {
     @extend %secondTitleStyle;
   }
 }
 .clients-list {
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
+  @include mq(mob-tab) {
     @include gridFlexWrap();
   }
-
-  @media screen and (min-width: 1200px) {
+  @include mq(desk) {
     @include centeredFlex();
   }
 
   &__item + &__item {
-    @media screen and (max-width: 480px) {
+    @include mq(mob-befor) {
       margin-top: 30px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include mq(desk) {
       margin-left: 30px;
     }
   }
@@ -27,20 +24,11 @@
   &__link {
     @include centeredFlex();
 
-    min-width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 210px;
     height: 92px;
-
-    @media screen and (min-width: 480px) {
-      width: 210px;
-    }
-
-    @media screen and (min-width: 768px) {
-      width: 226px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      width: 170px;
-    }
 
     @include borderType($mainIconColor, $l-width: 1px);
     border-radius: 4px;
@@ -51,6 +39,14 @@
     &:focus {
       outline: 0;
       border-color: $accentColor;
+    }
+
+    @include mq(tab) {
+      width: 226px;
+    }
+
+    @include mq(desk) {
+      width: 170px;
     }
   }
 

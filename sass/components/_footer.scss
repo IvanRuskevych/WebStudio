@@ -2,34 +2,27 @@
   background-color: $footerBgColor;
 
   &__wrap {
-    text-align: center;
+    @include mq(not-desk) {
+      text-align: center;
+    }
 
     padding-top: 60px;
     padding-bottom: 60px;
     align-items: baseline;
 
-    @media screen and (min-width: 1200px) {
-      @include centeredFlex();
-      align-items: baseline;
+    @include mq(desk) {
+      @include centeredFlex($ai: baseline);
     }
 
     &--position {
-      @media screen and (min-width: 768px) {
-        display: flex;
-        justify-content: space-around;
-        align-items: baseline;
+      @include mq(tab) {
+        @include centeredFlex($jc: space-around, $ai: baseline);
       }
     }
   }
 }
 
 .footer-socialnets {
-  margin-top: 60px;
-
-  @media screen and (min-width: 1200px) {
-    margin-right: 90px;
-  }
-
   &__title {
     margin-bottom: 20px;
     @include mainTextStyle($fontFamyly, 700, $size, $height, $spacing);
@@ -39,7 +32,10 @@
 }
 
 .footer-contacts {
-  @media screen and (min-width: 1200px) {
+  @include mq(mob-only) {
+    margin-bottom: 60px;
+  }
+  @include mq(desk) {
     margin-right: 70px;
   }
 }
@@ -48,9 +44,6 @@
   display: inline-flex;
   margin-bottom: 28px;
   color: $thirdTextColor;
-}
-
-.address {
 }
 
 .address-list {
@@ -85,9 +78,6 @@
 }
 
 .socialnets {
-  &__item {
-  }
-
   &__link {
     background-color: $secondaryIconBgColor;
   }

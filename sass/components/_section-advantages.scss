@@ -2,21 +2,27 @@
 }
 
 .advantages-list {
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     @include gridFlexWrap();
   }
 
   &__item {
-    @media screen and (min-width: 768px) {
+    @include mq(mob-befor) {
+      max-width: 290px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include mq(tab) {
       width: 354px;
     }
-    @media screen and (min-width: 1200px) {
+    @include mq(desk) {
       width: 270px;
     }
   }
 
   &__item + &__item {
-    @media screen and (max-width: 767px) {
+    @include mq(mob-only) {
       margin-top: 30px;
     }
   }
@@ -29,7 +35,7 @@
 
     background-color: $secondaryBgColor;
 
-    @media screen and (min-width: 768px) {
+    @include mq(tab) {
       width: inherit;
     }
   }
@@ -38,15 +44,16 @@
   }
 
   &__title {
-    @media screen and (max-width: 767px) {
-      text-align: center;
-    }
-
     margin-bottom: 10px;
+
     color: $primaryTextColor;
 
     @include mainTextStyle($fontFamyly, 700, $size, $height, $spacing);
     text-transform: uppercase;
+
+    @include mq(mob-only) {
+      text-align: center;
+    }
   }
 
   &__text {

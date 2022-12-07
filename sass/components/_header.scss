@@ -3,18 +3,18 @@
 }
 
 .header-nav {
-  display: flex;
-  align-items: center;
+  @include centeredFlex();
+
   height: 60px;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     @include centeredFlex();
     height: 80px;
   }
 }
 
 .header-menu {
-  @media screen and (max-width: 767px) {
+  @include mq(mob-only) {
     display: none;
   }
 
@@ -73,21 +73,21 @@
 }
 
 .header-contacts {
-  @media screen and (max-width: 767px) {
+  margin-left: auto;
+
+  @include mq(mob-only) {
     display: none;
   }
-
-  @media screen and (min-width: 1200px) {
+  @include mq(desk) {
     @include centeredFlex();
   }
-  margin-left: auto;
 
   &__item {
     color: $seconderyTextColor;
   }
 
   &__item + &__item {
-    @media screen and (min-width: 1200px) {
+    @include mq(desk) {
       margin-left: 30px;
     }
   }
@@ -106,7 +106,8 @@
       color: $accentColor;
       outline: 0;
     }
-    @media screen and (min-width: 1200px) {
+
+    @include mq(desk) {
       @include centeredFlex();
       @include mainTextStyle($fontFamyly, $weight, $size, $height, 0.02em);
     }
@@ -117,13 +118,13 @@
     margin-right: 10px;
   }
   &__icon-email {
-    @media screen and (max-width: 1199px) {
+    @include mq(not-desk) {
       width: 14px;
       height: 10px;
     }
   }
   &__icon-tel {
-    @media screen and (max-width: 1199px) {
+    @include mq(not-desk) {
       width: 10px;
       height: 14px;
     }
