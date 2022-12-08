@@ -17,8 +17,11 @@
   }
 
   &__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
     outline: 0;
+
+    height: 100%;
 
     @include mainTransition(box-shadow);
     &:hover,
@@ -54,7 +57,7 @@
     letter-spacing: 0.03em;
     color: $thirdTextColor;
 
-    transform: translateY(100%);
+    transform: translateY(101%);
 
     @include mainTransition(transform);
     .cases-gallery__link:hover &,
@@ -64,6 +67,7 @@
   }
 
   &__desc {
+    flex-grow: 1;
     padding: 20px 24px;
 
     @include borderType(#eeeeee, $l-width: 1px);
@@ -84,11 +88,11 @@
 }
 
 // ЗБІЛЬШЕННЯ height до 147px для .cases-gallery__desc (Технокряк)
-@include mq(tab-only) {
-  .cases-gallery__item:first-child {
-    // outline: 1px solid red;
-    .cases-gallery__desc {
-      height: 147px;
-    }
-  }
-}
+// @include mq(tab-only) {
+//   .cases-gallery__item:first-child {
+//     // outline: 1px solid red;
+//     .cases-gallery__desc {
+//       height: 147px;
+//     }
+//   }
+// }

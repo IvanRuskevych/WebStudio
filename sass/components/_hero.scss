@@ -11,10 +11,18 @@
     padding-bottom: 200px;
 
     max-width: 1600px;
-    height: 600px;
   }
 
   &__title {
+    @include mq(tab) {
+      padding-left: 180px;
+      padding-right: 180px;
+    }
+    @include mq(desk) {
+      padding-left: 280px;
+      padding-right: 280px;
+    }
+
     margin-bottom: 30px;
 
     color: $thirdTextColor;
